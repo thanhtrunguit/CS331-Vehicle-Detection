@@ -120,19 +120,19 @@ When we lower the confidence threshold (0.1), this means that we will get all of
 <p align="center">
   <img src="images/num_of_bbox.png" width="800">
 </p>
-<p align="center"><i>Example of too many bounding boxes</i></p>
+<p align="center"><i>Example of too many bounding boxes (0.1 confidence threshold)</i></p>
 
 Therefore, we utilized the **Weighted Box Fusion (WBF)** technique, which is normally used to combine predictions from multiple models. In our case, we applied WBF to fuse multiple predictions from a single model into one prediction. Using a lower confidence threshold increases the chances of detecting more vehicles, but it can also generate too many bounding boxes. By applying WBF, we are able to both reduce redundant boxes and improve the overall detection quality, resulting in better visualization and more accurate detections.
 
 <p align="center">
   <img src="images/wbf_1.png" width="800">
 </p>
-<p align="center"><i>Example of weighted box fusion</i></p>
+<p align="center"><i>Example of weighted box fusion, 0.5 confidence threshold (left) and 0.1 confidence threshold with wbf (right)</i></p>
 
 <p align="center">
   <img src="images/wbf_2.png" width="800">
 </p>
-<p align="center"><i>Example of weighted box fusion</i></p>
+<p align="center"><i>Example of weighted box fusion, 0.5 confidence threshold (left) and 0.1 confidence threshold with wbf (right)</i></p>
 
 ---
 ## 📘 Additional Resources
@@ -145,3 +145,6 @@ For full experiments, visualizations, metrics, and implementation details, pleas
 Our project presentation is available here:  
 👉 **[Presentation Link Here](https://www.canva.com/design/DAGpHjpfPao/eKJuuc4YhpQERZDGl0_J4A/edit?utm_content=DAGpHjpfPao&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**
 
+### Checkpoints
+Every checkpoints we trained and used for experiments are available here:  
+👉 **[Google drive](https://drive.google.com/drive/u/0/folders/19qyuInXBu-Hp5baxkoH4uxouC4ZswxlT)**
