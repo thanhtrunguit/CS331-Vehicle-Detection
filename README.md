@@ -98,18 +98,43 @@ Comparative experiments performed using three YOLO versions: YOLOv8, YOLOv11 and
 ## 6️⃣ Confidence Threshold Experiments  
 We further perform analysis on how different confidence thresholds affect precision/recall and mAP performance. The lower the confidence score of the models, the higher the MAP50 we achived, whereas the F1-score remains nearly unchanged.
 <p align="center">
-  <img src="images/map50_conf.png" width="500">
+  <img src="images/map50_conf.png" width="800">
 </p>
 <p align="center"><i>Changes in MAP50 base on confidence score</i></p>
 
 <p align="center">
-  <img src="images/f1_score.png" width="500">
+  <img src="images/f1_score.png" width="800">
 </p>
 <p align="center"><i>Changes in F1-score base on confidence threshold</i></p>
 
+With confidence threshold, checkpoint YOLOv9c_e30 with full augmentations increased in total score (MAP50 + F1).
+
+<p align="center">
+  <img src="images/changes_in_v9_model.png" width="800">
+</p>
+<p align="center"><i>Changes in total score of YOLOv9 models base on confidence threshold</i></p>
 
 ---
+## Modify bounding box for better visual
+When we lower the confidence threshold (0.1), this means that we will get all of the predictions from the model, that leads to huge amount of bounding boxes displayed.
+<p align="center">
+  <img src="images/num_of_bbox.png" width="800">
+</p>
+<p align="center"><i>Example of too many bounding boxes</i></p>
 
+Therefore, we utilized the **Weighted Box Fusion (WBF)** technique, which is normally used to combine predictions from multiple models. In our case, we applied WBF to fuse multiple predictions from a single model into one prediction. Using a lower confidence threshold increases the chances of detecting more vehicles, but it can also generate too many bounding boxes. By applying WBF, we are able to both reduce redundant boxes and improve the overall detection quality, resulting in better visualization and more accurate detections.
+
+<p align="center">
+  <img src="images/wbf_1.png" width="800">
+</p>
+<p align="center"><i>Example of weighted box fusion</i></p>
+
+<p align="center">
+  <img src="images/wbf_2.png" width="800">
+</p>
+<p align="center"><i>Example of weighted box fusion</i></p>
+
+---
 ## 📘 Additional Resources
 
 ### Detailed Analysis
