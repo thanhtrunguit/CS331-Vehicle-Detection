@@ -76,22 +76,22 @@ After this procedure, the average number of vehicles per image increased.
 ---
 
 ## 4️⃣ Experiments with YOLOv8, YOLOv9, and YOLOv11  
-Summary: comparative experiments performed using three YOLO versions: YOLOv8, YOLOv11 and YOLOv9. All trained models were evaluate using MAP@50. We chose YOLOv9 with full augmentation as our final models.
+Comparative experiments performed using three YOLO versions: YOLOv8, YOLOv11 and YOLOv9. All trained models were evaluate using MAP@50 with the same confidence score of 50. We chose YOLOv9 with full augmentation as our final models. 
 
 <p align="center">
-  <img src="images/v8.png" width="500">
+  <img src="images/v8.png" width="800">
 </p>
-<p align="center"><i>YOLOv8 stats</i></p>
+<p align="center"><i>YOLOv8 training stats</i></p>
 
 <p align="center">
-  <img src="images/v9.png" width="500">
+  <img src="images/v9.png" width="800">
 </p>
-<p align="center"><i>YOLOv9 stats</i></p>
+<p align="center"><i>YOLOv9 training stats</i></p>
 
 <p align="center">
-  <img src="images/v11.png" width="500">
+  <img src="images/v11.png" width="800">
 </p>
-<p align="center"><i>YOLOv11 stats</i></p>
+<p align="center"><i>YOLOv11 training stats</i></p>
 
 ---
 
@@ -112,11 +112,11 @@ We further perform analysis on how different confidence thresholds affect precis
 
 ## 📘 Additional Resources
 
-### 🔍 Detailed Analysis
+### Detailed Analysis
 For full experiments, visualizations, metrics, and implementation details, please see our Kaggle Notebook:  
 👉 **[Kaggle Notebook Link Here](https://www.kaggle.com/code/ictunivers/yolo9/notebook)**
 
-### 🎤 Presentation Slides
+### Presentation Slides
 Our project presentation is available here:  
 👉 **[Presentation Link Here](https://www.canva.com/design/DAGpHjpfPao/eKJuuc4YhpQERZDGl0_J4A/edit?utm_content=DAGpHjpfPao&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**
 
